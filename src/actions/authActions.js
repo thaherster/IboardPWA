@@ -7,7 +7,10 @@ import { GET_ERRORS, SET_CURRENT_USER } from "./types";
 //Register User
 export const registerUser = (userData, history) => dispatch => {
   axios
-    .post("/api/users/register", userData)
+    .post(
+      "https://damp-everglades-11634.herokuapp.com/api/users/register",
+      userData
+    )
     .then(res => history.push("/login")) //action was not dispatched since only 1 statement is needed to be called here
     .catch(err =>
       dispatch({
@@ -21,7 +24,10 @@ export const registerUser = (userData, history) => dispatch => {
 
 export const loginUser = userData => dispatch => {
   axios
-    .post("/api/users/login", userData)
+    .post(
+      "https://damp-everglades-11634.herokuapp.com/api/users/login",
+      userData
+    )
     .then(res => {
       //Save to local storage
       const { token } = res.data;

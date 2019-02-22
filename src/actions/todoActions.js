@@ -5,7 +5,7 @@ import { ADD_TODO, GET_ERRORS, GET_TODOS, DELETE_TODO } from "./types";
 //Add Todo
 export const addTodo = todoData => dispatch => {
   axios
-    .post("/api/todos", todoData)
+    .post("https://damp-everglades-11634.herokuapp.com/api/todos", todoData)
     .then(res => {
       dispatch({
         type: ADD_TODO,
@@ -23,7 +23,7 @@ export const addTodo = todoData => dispatch => {
 //GET  Todos
 export const getTodos = () => dispatch => {
   axios
-    .get("/api/todos")
+    .get("https://damp-everglades-11634.herokuapp.com/api/todos")
     .then(res => {
       dispatch({
         type: GET_TODOS,
@@ -41,7 +41,7 @@ export const getTodos = () => dispatch => {
 //Delte Todo
 export const deleteTodo = id => dispatch => {
   axios
-    .delete(`/api/todos/${id}`)
+    .delete(`https://damp-everglades-11634.herokuapp.com/api/todos/${id}`)
     .then(res => {
       dispatch({
         type: DELETE_TODO,
