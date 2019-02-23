@@ -4,7 +4,6 @@ import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser } from "./actions/authActions";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
 import store from "./store";
 
 import Navbar from "./components/layout/Navbar";
