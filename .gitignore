@@ -12,6 +12,8 @@ yarn.lock
 
 # production
 /buildhero
+# production
+/build
 
 # misc
 .DS_Store
